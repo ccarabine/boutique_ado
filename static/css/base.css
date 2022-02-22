@@ -1,24 +1,16 @@
 html {
-    height: 100%; /*will allow our h100 classes in vertical centering to work.*/
+    height: 100%;
 }
 
 body {
     background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);/*I also want to add a height calculation to the body element.
-    Which will be 100vh minus 164 pixels the eventual height of our top header.*/
+    height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
 }
-/*I've taken this icon class from another CSS framework similar to bootstrap called Bulma
-Which will ensure that whenever we use font awesome icons.
-They will always stay perfectly centred and have a consistent size
-unless we manually change it.
-The logo font class will be used throughout this site
-to maintain consistency with the uppercase font of the logo
-whenever we want to call attention to something.
-And the main logo link class here
-just makes it so that the logo only takes up as much space as the text requires and no more.*//* from Bulma */
+
+/* from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -46,6 +38,19 @@ just makes it so that the logo only takes up as much space as the text requires 
     color: white;
 }
 
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
@@ -63,8 +68,9 @@ just makes it so that the logo only takes up as much space as the text requires 
 .border-black {
     border: 1px solid black !important;
 }
+
 .bg-black {
-    background: #000 !important
+    background: #000 !important;
 }
 
 .overlay {
@@ -103,12 +109,7 @@ a.category-badge > span.badge:hover {
   }
 }
 
-/* fixed top navbar only on medium and up
-
-The second one will add 164 pixels of padding to our header container class
-to push the body down to the bottom of the main page header.
-This is the page header block that we added at the top of the index.html page in the home app.
-*/
+/* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -133,3 +134,10 @@ This is the page header block that we added at the top of the index.html page in
         height: calc(100vh - 116px);
     }
 }
+
+/* fixed top navbar only on medium and up
+
+The second one will add 164 pixels of padding to our header container class
+to push the body down to the bottom of the main page header.
+This is the page header block that we added at the top of the index.html page in the home app.
+*/
