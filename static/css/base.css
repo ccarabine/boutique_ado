@@ -63,7 +63,9 @@ just makes it so that the logo only takes up as much space as the text requires 
 .border-black {
     border: 1px solid black !important;
 }
-
+.bg-black {
+    background: #000 !important
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
