@@ -46,6 +46,20 @@ card.addEventListener('change', function (event) {
 // Handle form submit
 var form = document.getElementById('payment-form');
 
+
+/*
+When the user clicks the submit button the event listener prevents the form from submitting
+and instead disables the card element and triggers the loading overlay.
+Then we create a few variables to capture the form data we can't put in
+the payment intent here, and instead post it to the cache_checkout_data view
+The view updates the payment intent and returns a 200 response, at which point we
+call the confirm card payment method from stripe and if everything is ok
+submit the form.
+If there's an error in the form then the loading overlay will
+be hidden the card element re-enabled and the error displayed for the user.
+If anything goes wrong posting the data to our view. We'll reload the page and
+display the error without ever charging the user.*/
+
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
