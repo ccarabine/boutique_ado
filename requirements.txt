@@ -12,7 +12,6 @@ django-countries==7.3.1
 django-crispy-forms==1.14.0
 dulwich==0.19.15
 fastimport==0.9.8
-heroku==0.1.4
 idna==2.8
 oauthlib==3.2.0
 Pillow==9.0.1
