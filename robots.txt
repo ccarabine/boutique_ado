@@ -1,0 +1,4 @@
+user-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Sitemap: https://ckcabs-boutique-ado.herokuapp.com/sitemap.xml
